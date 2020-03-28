@@ -50,7 +50,8 @@ TEST_CASE("famous quete"){
 
     CHECK(phonetic::find(text,"zidE")=="side");
     CHECK(phonetic::find(text,"sIte")=="side");
-    CHECK(phonetic::find(text,"ZyRe")=="side");
+    CHECK(phonetic::find(text,"ZyTe")=="side");
+    CHECK_THROWS(phonetic::find(text,"ZyRe"));
 }
 
 TEST_CASE("alphbet per char test"){
@@ -70,8 +71,8 @@ TEST_CASE("alphbet per char test"){
     CHECK(phonetic::find(text,"m")=="m");
     CHECK(phonetic::find(text,"n")=="n");
     CHECK(phonetic::find(text,"o")=="o");
-    CHECK(phonetic::find(text,"p")=="a");
-    CHECK(phonetic::find(text,"q")=="c"); //50
+    CHECK(phonetic::find(text,"p")=="b");
+    CHECK(phonetic::find(text,"q")=="c");
     CHECK(phonetic::find(text,"r")=="r");
     CHECK(phonetic::find(text,"s")=="s");
     CHECK(phonetic::find(text,"t")=="d");
@@ -115,7 +116,7 @@ TEST_CASE("game quetes"){
     CHECK(phonetic::find(text,"yndo")=="into");
 
     CHECK(phonetic::find(text,"qylling")=="killing");
-    CHECK(phonetic::find(text,"CIllYing")=="killing");
+    CHECK(phonetic::find(text,"CIllYng")=="killing");
 
     CHECK(phonetic::find(text,"eaKh")=="each");
     CHECK(phonetic::find(text,"EAQh")=="each");
