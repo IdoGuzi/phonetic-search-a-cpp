@@ -73,8 +73,8 @@ string phonetic::find(string text, string word){
         }
         if (equal) return text.substr(start,end-start+count_non_letter);
     }
-    string err = word + " doesn't seem to be in the text: " + text;
-    throw string(err);
+    string err = "\"" + word + "\" is not a full word in the sentence";
+    throw runtime_error(err);
 }
 
 
